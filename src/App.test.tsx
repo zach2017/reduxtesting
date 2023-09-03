@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { store } from './store';
 
 test('renders learn react link', () => {
-  render(<Provider store={store}><App foo="foo"/></Provider>);
+  render(<Provider store={store}><App foo="xfoo"/></Provider>);
   
   const btn = screen.getByRole('button', {
     name: /Click me!/i
@@ -15,4 +15,6 @@ test('renders learn react link', () => {
   } ) 
   const linkElement = screen.getByText(/BeforeDDD/i);
   expect(linkElement).toBeInTheDocument();
+  const foo = screen.getByText(/xfoo/i)
+  expect(foo).toBeInTheDocument()
 });

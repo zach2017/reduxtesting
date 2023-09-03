@@ -36,6 +36,7 @@ class App extends React.Component<FooProps & PropsFromRedux> {
               <button id="foo" onClick={this.myFunction}>
                   Click me!
               </button>
+              <p>{this.props.foo}</p>
           </div>
       );
   }
