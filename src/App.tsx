@@ -29,11 +29,11 @@ class App extends React.Component<FooProps & PropsFromRedux> {
   }
 
   render() {
-      console.log(this.props)
+      console.log(this.props.simpleState.value)
       return (
           <div >
-              <p>learn react</p>
-              <button onClick={this.myFunction}>
+             more<p>{this.props.simpleState.value}</p>
+              <button id="foo" onClick={this.myFunction}>
                   Click me!
               </button>
           </div>
